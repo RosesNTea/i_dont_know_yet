@@ -30,6 +30,7 @@ func loadNewLevel():
 func _ready() -> void:
 	SignalBus.sceneEnd.connect(loadNewLevel);
 	SignalBus.deathScene.connect(onDeath);
+	SignalBus.mainMenuShow.connect(unloadLevel);
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
