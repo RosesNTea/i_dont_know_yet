@@ -25,8 +25,18 @@ func loadNewLevel():
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SignalBus.sceneEnd.connect(loadNewLevel);
+	SignalBus.deathScene.connect(onDeath);
 	loadNewLevel();
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
+func onDeath() -> void:
+	unloadLevel();
+	var levelResource : PackedScene = load("res://scenes/death.tscn");
+	
+	if levelResource:
+		levelInstance = levelResource.instantiate();
+		add_child(levelInstance);
+	

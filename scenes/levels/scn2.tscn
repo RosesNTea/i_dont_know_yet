@@ -95,5 +95,6 @@ wait_time = 0.3
 
 [node name="Timer2" type="Timer" parent="." unique_id=93166255]
 wait_time = 5.0
+one_shot = true
 
 [connection signal="area_entered" from="slappyArm" to="." method="_on_slappy_arm_area_entered"]
