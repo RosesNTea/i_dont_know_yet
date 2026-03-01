@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c2hwla6kek1mk"
+path="res://.godot/imported/Better death scream.mp3-c1a349f1406c1e971f940e696c8008bc.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/Better death scream.mp3"
+dest_files=["res://.godot/imported/Better death scream.mp3-c1a349f1406c1e971f940e696c8008bc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

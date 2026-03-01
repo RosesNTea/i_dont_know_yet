@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bhqsybm8cc66k" path="res://assets/images/dirt.png" id="1_5ljj3"]
 [ext_resource type="Texture2D" uid="uid://bq2kv07rcpt42" path="res://assets/images/path.png" id="1_fjtlv"]
-[ext_resource type="Script" uid="uid://dmd6mg6fhdl26" path="res://scenes/levels/running_in_tunnel.gd" id="1_t7cwt"]
+[ext_resource type="Script" uid="uid://dmd6mg6fhdl26" path="res://scenes/levels/scn1.gd" id="1_t7cwt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ljj3"]
 size = Vector2(20.571428, 20.571428)
