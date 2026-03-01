@@ -24,11 +24,14 @@ func _ready() -> void:
 	startingPosition = bug.position;
 	horizontalRate = initHorizontalRate;
 	verticalRate = initVerticalRate;
+	
 	$Timer2.start();
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	print($Timer2.time_left)
+	
 	if ($Timer2.time_left != 0):
 		if (right_moving):
 			if (bug.position.x < startingPosition.x + 150):

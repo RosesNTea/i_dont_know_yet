@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://h837rx5qrkgx"]
+
+[ext_resource type="Script" uid="uid://bc5qh3hbrfkpb" path="res://scripts/death.gd" id="1_2m3wi"]
+[ext_resource type="Texture2D" uid="uid://cyv8q5qdg8d7b" path="res://assets/images/death screen 1.png" id="1_7205l"]
+[ext_resource type="Texture2D" uid="uid://bemj5fqm1b4an" path="res://assets/images/death screen 2.png" id="2_2m3wi"]
+[ext_resource type="Texture2D" uid="uid://b3xi56unv4act" path="res://assets/images/death screen 3.png" id="3_3l7jp"]
+[ext_resource type="Texture2D" uid="uid://cv1j1e6cpuh2x" path="res://assets/images/death screen 4.png" id="4_shhaa"]
+[ext_resource type="Texture2D" uid="uid://cw6yviyarbec6" path="res://assets/images/death screen 5.png" id="5_npx8y"]
+[ext_resource type="Texture2D" uid="uid://c7nvl5uvt4wpc" path="res://assets/images/death screen 6.png" id="6_qttbc"]
+[ext_resource type="Texture2D" uid="uid://ooqqcysyhvh4" path="res://assets/images/death screen 7.png" id="7_a60g8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_48ncm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7205l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2m3wi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3l7jp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_shhaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_npx8y")
+}],
+"loop": false,
+"name": &"crawling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_qttbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a60g8")
+}],
+"loop": true,
+"name": &"crustacianControl",
+"speed": 5.0
+}]
+
+[node name="death" type="Node2D" unique_id=542550462]
+script = ExtResource("1_2m3wi")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1033753707]
+offset_left = 3.0517578e-05
+offset_top = 3.0517578e-05
+offset_right = 720.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=713255077]
+position = Vector2(359, 359)
+scale = Vector2(0.2888, 0.2888)
+sprite_frames = SubResource("SpriteFrames_48ncm")
+animation = &"crawling"
+autoplay = "crawling"
+frame = 4
+frame_progress = 1.0
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
