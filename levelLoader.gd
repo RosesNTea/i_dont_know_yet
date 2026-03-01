@@ -15,12 +15,16 @@ func loadNewLevel():
 
 	levelPath = "res://scenes/levels/scn%s.tscn" % str(levelnumber);
 	
-	var levelResource : PackedScene = load(levelPath);
+	if (ResourceLoader.exists(levelPath)):
+		var levelResource : PackedScene = load(levelPath);
+		
+		if levelResource:
+			levelInstance = levelResource.instantiate();
+			add_child(levelInstance);
+			levelnumber += 1;
+	else:
+		SignalBus.mainMenuShow.emit();
 	
-	if levelResource:
-		levelInstance = levelResource.instantiate();
-		add_child(levelInstance);
-		levelnumber += 1;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
