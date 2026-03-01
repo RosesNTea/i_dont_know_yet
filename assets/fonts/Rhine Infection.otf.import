@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://4dt758ji3yq5"
-path="res://.godot/imported/Rhine Infection.otf-3484fd7b0a62de1974c974a1d2aee42d.fontdata"
+path="res://.godot/imported/Rhine Infection.otf-24a8e64fd6028098a74ac2be807778ba.fontdata"
 
 [deps]
 
-source_file="res://Rhine Infection.otf"
-dest_files=["res://.godot/imported/Rhine Infection.otf-3484fd7b0a62de1974c974a1d2aee42d.fontdata"]
+source_file="res://assets/fonts/Rhine Infection.otf"
+dest_files=["res://.godot/imported/Rhine Infection.otf-24a8e64fd6028098a74ac2be807778ba.fontdata"]
 
 [params]
 

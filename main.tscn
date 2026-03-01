@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://cv0ggxwdeachj"]
+[gd_scene format=3 uid="uid://cqm7x83qdxt1v"]
 
-[ext_resource type="Script" uid="uid://d8jay5hpdp37" path="res://levelLoader.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://d8jay5hpdp37" path="res://scripts/levelLoader.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://bhqsybm8cc66k" path="res://assets/images/dirt.png" id="2_1bvp3"]
-[ext_resource type="Script" uid="uid://cmai4jl1qmwsn" path="res://main_menu.gd" id="2_272bh"]
-[ext_resource type="FontFile" uid="uid://4dt758ji3yq5" path="res://Rhine Infection.otf" id="3_lquwl"]
-[ext_resource type="FontFile" uid="uid://cc1rqxsa8rjju" path="res://PaintDropsRegular-0WaJo.ttf" id="4_7mycd"]
+[ext_resource type="Script" uid="uid://cmai4jl1qmwsn" path="res://scripts/main_menu.gd" id="2_272bh"]
+[ext_resource type="FontFile" uid="uid://4dt758ji3yq5" path="res://assets/fonts/Rhine Infection.otf" id="3_lquwl"]
+[ext_resource type="FontFile" uid="uid://cc1rqxsa8rjju" path="res://assets/fonts/PaintDropsRegular-0WaJo.ttf" id="4_7mycd"]
 [ext_resource type="Texture2D" uid="uid://cgfxqshcajrji" path="res://assets/images/silouette.png" id="5_7mycd"]
 [ext_resource type="Texture2D" uid="uid://5n7ndug1awu2" path="res://assets/images/bug.png" id="6_272bh"]
 
