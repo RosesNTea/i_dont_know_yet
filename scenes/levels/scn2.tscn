@@ -9,6 +9,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_surfi"]
 size = Vector2(20.571428, 20.571428)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bmde7"]
+radius = 62.001526
+height = 323.89557
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_yf7ge"]
 animations = [{
 "frames": [{
@@ -23,10 +27,14 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p0y8k"]
+radius = 184.58612
+height = 369.17224
+
 [node name="bugUnderSkin" type="Node2D" unique_id=1066599802]
 script = ExtResource("1_yf7ge")
-rate = 150.0
-verticalRate = 300.0
+initHorizontalRate = 200.0
+initVerticalRate = 200.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=357431973]
 
@@ -53,22 +61,39 @@ position = Vector2(-560, 136)
 scale = Vector2(0.28800002, 0.28800002)
 texture = ExtResource("1_ak32g")
 
-[node name="bug" type="Node2D" parent="armWithBug" unique_id=1812377868]
+[node name="bug" type="Node2D" parent="armWithBug" unique_id=2082153173]
 position = Vector2(-150, 322)
 scale = Vector2(0.288, 0.288)
 
-[node name="Node2D" type="Node2D" parent="armWithBug/bug" unique_id=1860615936]
+[node name="Node2D" type="Area2D" parent="armWithBug/bug" unique_id=445979852 groups=["bug"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="armWithBug/bug/Node2D" unique_id=1493690865]
 position = Vector2(-1423.6112, -645.8334)
 texture = ExtResource("3_hm560")
 
-[node name="slappyArm" type="Node2D" parent="." unique_id=1904279054]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="armWithBug/bug/Node2D" unique_id=207518319]
+position = Vector2(-1784.7222, -618.0557)
+rotation = 1.0471976
+shape = SubResource("CapsuleShape2D_bmde7")
+
+[node name="slappyArm" type="Area2D" parent="." unique_id=1421421077]
 position = Vector2(252.155, 313.5)
 rotation = 0.4223697
 scale = Vector2(0.288, 0.288)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="slappyArm" unique_id=1489811460]
 sprite_frames = SubResource("SpriteFrames_yf7ge")
-frame = 1
-frame_progress = 0.09304345
+frame_progress = 0.29255053
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slappyArm" unique_id=275773994]
+position = Vector2(-248.15562, -381.4499)
+rotation = -0.7487463
+shape = SubResource("CapsuleShape2D_p0y8k")
+
+[node name="Timer" type="Timer" parent="." unique_id=1820685176]
+wait_time = 0.3
+
+[node name="Timer2" type="Timer" parent="." unique_id=93166255]
+wait_time = 5.0
+
+[connection signal="area_entered" from="slappyArm" to="." method="_on_slappy_arm_area_entered"]
