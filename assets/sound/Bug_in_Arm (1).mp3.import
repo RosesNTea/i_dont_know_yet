@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7i8wiojjhrx8"
+path="res://.godot/imported/Bug_in_Arm (1).mp3-0e48efd338ab8240f5d0df123adb3aa0.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/Bug_in_Arm (1).mp3"
+dest_files=["res://.godot/imported/Bug_in_Arm (1).mp3-0e48efd338ab8240f5d0df123adb3aa0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
