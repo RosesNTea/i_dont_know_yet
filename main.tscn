@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cqm7x83qdxt1v"]
+[gd_scene format=3 uid="uid://cv0ggxwdeachj"]
 
 [ext_resource type="Script" uid="uid://d8jay5hpdp37" path="res://levelLoader.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://bhqsybm8cc66k" path="res://assets/images/dirt.png" id="2_1bvp3"]

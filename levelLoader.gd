@@ -10,6 +10,7 @@ func unloadLevel():
 
 func loadNewLevel():
 	unloadLevel();
+	SignalBus.mainMenuHide.emit();
 	var levelPath : String
 #	If
 
