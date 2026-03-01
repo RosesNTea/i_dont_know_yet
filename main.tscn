@@ -1,6 +1,14 @@
 [gd_scene format=3 uid="uid://cqm7x83qdxt1v"]
 
 [ext_resource type="Script" uid="uid://d8jay5hpdp37" path="res://levelLoader.gd" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://bhqsybm8cc66k" path="res://assets/images/dirt.png" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://bao0oqfxapt6" path="res://main_menu.gd" id="2_272bh"]
+[ext_resource type="FontFile" uid="uid://4dt758ji3yq5" path="res://Rhine Infection.otf" id="3_lquwl"]
+[ext_resource type="FontFile" uid="uid://cc1rqxsa8rjju" path="res://PaintDropsRegular-0WaJo.ttf" id="4_7mycd"]
+[ext_resource type="Texture2D" uid="uid://cgfxqshcajrji" path="res://assets/images/silouette.png" id="5_7mycd"]
+[ext_resource type="Texture2D" uid="uid://5n7ndug1awu2" path="res://assets/images/bug.png" id="6_272bh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_272bh"]
 
 [node name="main" type="Node" unique_id=51344965]
 
@@ -11,6 +19,85 @@ script = ExtResource("1_ig7tw")
 
 [node name="mainMenu" type="Control" parent="CanvasLayer" unique_id=713884803]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_272bh")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/mainMenu" unique_id=930560041]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.09809854, 0.09809851, 0.09809851, 1)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/mainMenu" unique_id=1279212912]
+modulate = Color(0.4140658, 0.4140658, 0.4140657, 1)
+layout_mode = 0
+offset_right = 3599.9998
+offset_bottom = 3599.9998
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_1bvp3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/mainMenu" unique_id=1215850749]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -87.5
+offset_top = -220.0
+offset_right = 87.5
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Start" type="Button" parent="CanvasLayer/mainMenu/VBoxContainer" unique_id=1958757200]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.67058825, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_lquwl")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_272bh")
+text = "Start Game"
+
+[node name="Quit" type="Button" parent="CanvasLayer/mainMenu/VBoxContainer" unique_id=1189702030]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.67058825, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_lquwl")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_272bh")
+text = "Quit Game"
+
+[node name="Label" type="Label" parent="CanvasLayer/mainMenu" unique_id=1354876768]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -279.5
+offset_top = 48.0
+offset_right = 279.5
+offset_bottom = 125.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.88235295, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_7mycd")
+theme_override_font_sizes/font_size = 80
+text = "Earth's Cruelty"
+
+[node name="Silouette" type="Sprite2D" parent="CanvasLayer/mainMenu" unique_id=2002927686]
+position = Vector2(492, 390)
+scale = Vector2(0.1552, 0.1552)
+texture = ExtResource("5_7mycd")
+
+[node name="Bug" type="Sprite2D" parent="CanvasLayer/mainMenu" unique_id=792721457]
+position = Vector2(189, 522)
+scale = Vector2(0.069230705, 0.069230705)
+texture = ExtResource("6_272bh")
+
+[connection signal="pressed" from="CanvasLayer/mainMenu/VBoxContainer/Start" to="levelContainer" method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/mainMenu/VBoxContainer/Start" to="CanvasLayer/mainMenu" method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/mainMenu/VBoxContainer/Quit" to="CanvasLayer/mainMenu" method="_on_quit_pressed"]
