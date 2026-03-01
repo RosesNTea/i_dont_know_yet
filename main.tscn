@@ -101,6 +101,3 @@ texture = ExtResource("6_272bh")
 [connection signal="pressed" from="CanvasLayer/mainMenu/VBoxContainer/Start" to="levelContainer" method="_on_start_pressed"]
 [connection signal="pressed" from="CanvasLayer/mainMenu/VBoxContainer/Start" to="CanvasLayer/mainMenu" method="_on_start_pressed"]
 [connection signal="pressed" from="CanvasLayer/mainMenu/VBoxContainer/Quit" to="CanvasLayer/mainMenu" method="_on_quit_pressed"]
-anchors_preset = 0
-offset_right = 720.0
-offset_bottom = 720.0
