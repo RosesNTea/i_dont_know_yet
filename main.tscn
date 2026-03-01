@@ -1,5 +1,16 @@
 [gd_scene format=3 uid="uid://cqm7x83qdxt1v"]
 
+[ext_resource type="Script" uid="uid://d8jay5hpdp37" path="res://levelLoader.gd" id="1_ig7tw"]
+
 [node name="main" type="Node" unique_id=51344965]
 
 [node name="levelContainer" type="Node2D" parent="." unique_id=1970485493]
+script = ExtResource("1_ig7tw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1175608361]
+
+[node name="mainMenu" type="Control" parent="CanvasLayer" unique_id=713884803]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

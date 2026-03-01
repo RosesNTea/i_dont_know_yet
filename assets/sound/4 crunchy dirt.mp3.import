@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cedjk0851aw68"
+path="res://.godot/imported/4 crunchy dirt.mp3-700d2f49f899923fa3e028b6843fd6c8.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/4 crunchy dirt.mp3"
+dest_files=["res://.godot/imported/4 crunchy dirt.mp3-700d2f49f899923fa3e028b6843fd6c8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

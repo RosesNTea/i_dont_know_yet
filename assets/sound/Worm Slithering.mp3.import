@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgwot8ctfin0q"
+path="res://.godot/imported/Worm Slithering.mp3-da15006f634721de1e08d4f14afc5fdc.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/Worm Slithering.mp3"
+dest_files=["res://.godot/imported/Worm Slithering.mp3-da15006f634721de1e08d4f14afc5fdc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
