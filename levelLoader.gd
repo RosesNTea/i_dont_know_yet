@@ -8,7 +8,9 @@ func unloadLevel():
 		levelInstance.queue_free();
 	levelInstance = null;
 
-func loadNewLevel():
+func loadNewLevel(optionalLevelNumber: int = 0):
+	if optionalLevelNumber != 0:
+		levelnumber = optionalLevelNumber;
 	unloadLevel();
 	SignalBus.mainMenuHide.emit();
 	var levelPath : String
