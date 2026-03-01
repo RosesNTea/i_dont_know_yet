@@ -1,43 +1,12 @@
 [gd_scene format=3 uid="uid://bv6oxv8oalpgb"]
 
 [ext_resource type="Texture2D" uid="uid://bhqsybm8cc66k" path="res://assets/images/dirt.png" id="1_227pa"]
+[ext_resource type="Script" uid="uid://cvls3wgf5evt1" path="res://scripts/scn1.gd" id="1_c0mo4"]
 [ext_resource type="Texture2D" uid="uid://bq2kv07rcpt42" path="res://assets/images/path.png" id="2_c0mo4"]
 [ext_resource type="Texture2D" uid="uid://cg637mj5y4fry" path="res://assets/images/running arms 1.png" id="3_bv4xf"]
 [ext_resource type="Texture2D" uid="uid://c7h5ux8hayp45" path="res://assets/images/running arms 2.png" id="4_rfa7d"]
 [ext_resource type="Texture2D" uid="uid://cto6arcxejcdt" path="res://assets/images/running arms 3.png" id="5_rheg1"]
 [ext_resource type="Texture2D" uid="uid://bqawlryg5nn8j" path="res://assets/images/running arms 4.png" id="6_7fu73"]
-
-[sub_resource type="GDScript" id="GDScript_7bh6p"]
-script/source = "extends Node2D
-var progress: float = 1;
-@onready var hands: AnimatedSprite2D = $AnimatedSprite2D;
-@onready var background: StaticBody2D = $StaticBody2D;
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if (progress >= 2):
-		SignalBus.sceneEnd.emit();
-	else:
-		if (Input.is_action_pressed(\"Forward\")):
-			progress += 0.3 * delta;
-			hands.visible = true;
-		elif (Input.is_action_pressed(\"Backward\")):
-			progress -= 0.3 * delta;
-			hands.visible = true;
-		else:
-			hands.visible = false;
-		if (progress < 1):
-			progress = 1;
-			hands.visible = false;
-		background.scale = Vector2(progress, progress);
-		print(progress);
-"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ljj3"]
 size = Vector2(20.571428, 20.571428)
@@ -46,9 +15,6 @@ size = Vector2(20.571428, 20.571428)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_bv4xf")
-}, {
-"duration": 1.0,
 "texture": ExtResource("4_rfa7d")
 }, {
 "duration": 1.0,
@@ -56,6 +22,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_7fu73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bv4xf")
 }],
 "loop": true,
 "name": &"default",
@@ -63,7 +32,7 @@ animations = [{
 }]
 
 [node name="runningInTunnel" type="Node2D" unique_id=1584212728]
-script = SubResource("GDScript_7bh6p")
+script = ExtResource("1_c0mo4")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1250446611]
 
