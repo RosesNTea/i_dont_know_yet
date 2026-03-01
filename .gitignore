@@ -5,3 +5,5 @@
 *.gd.uid
 
 addons/
+
+settings.json
