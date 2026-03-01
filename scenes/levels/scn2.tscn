@@ -3,9 +3,25 @@
 [ext_resource type="Texture2D" uid="uid://vh2dwfx8vxbr" path="res://assets/images/arm with bug.png" id="1_ak32g"]
 [ext_resource type="Script" uid="uid://bj6jey5ibr7wl" path="res://scripts/scn2.gd" id="1_yf7ge"]
 [ext_resource type="Texture2D" uid="uid://c6rxseal3vqc0" path="res://assets/images/bug bump.png" id="3_hm560"]
+[ext_resource type="Texture2D" uid="uid://dekgfdmf38cyc" path="res://assets/images/hand hover.png" id="4_bmde7"]
+[ext_resource type="Texture2D" uid="uid://dolvwlqhqqgb0" path="res://assets/images/hand smack.png" id="5_p0y8k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_surfi"]
 size = Vector2(20.571428, 20.571428)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yf7ge"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_bmde7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p0y8k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="bugUnderSkin" type="Node2D" unique_id=1066599802]
 script = ExtResource("1_yf7ge")
@@ -14,15 +30,15 @@ verticalRate = 300.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=357431973]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1091556284]
+[node name="background" type="StaticBody2D" parent="." unique_id=1091556284]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2081399871]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background" unique_id=2081399871]
 scale = Vector2(35, 35)
 shape = SubResource("RectangleShape2D_surfi")
 
-[node name="Node2D" type="Node2D" parent="StaticBody2D" unique_id=1177548729]
+[node name="Node2D" type="Node2D" parent="background" unique_id=1177548729]
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D/Node2D" unique_id=1562237779]
+[node name="ColorRect" type="ColorRect" parent="background/Node2D" unique_id=1562237779]
 offset_left = -360.0
 offset_top = -360.0
 offset_right = 360.0
@@ -46,3 +62,13 @@ scale = Vector2(0.288, 0.288)
 [node name="Sprite2D" type="Sprite2D" parent="armWithBug/bug/Node2D" unique_id=1493690865]
 position = Vector2(-1423.6112, -645.8334)
 texture = ExtResource("3_hm560")
+
+[node name="slappyArm" type="Node2D" parent="." unique_id=1904279054]
+position = Vector2(252.155, 313.5)
+rotation = 0.4223697
+scale = Vector2(0.288, 0.288)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="slappyArm" unique_id=1489811460]
+sprite_frames = SubResource("SpriteFrames_yf7ge")
+frame = 1
+frame_progress = 0.09304345
