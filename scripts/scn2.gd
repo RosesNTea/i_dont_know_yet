@@ -52,6 +52,7 @@ func _process(delta: float) -> void:
 			else:
 				up_moving = true;
 	else:
+		SignalBus.deathScene.emit();
 		
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
