@@ -13,7 +13,6 @@ config_version=5
 config/name="Earth's Cruelty"
 run/main_scene="uid://cqm7x83qdxt1v"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
 
 [autoload]
 
